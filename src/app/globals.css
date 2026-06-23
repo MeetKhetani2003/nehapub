@@ -19,13 +19,19 @@
 }
 
 :root {
-  --background: #FAFAFA;
+  --background: #eef2f7;
   --foreground: #111827;
 }
 
 body {
-  background-color: var(--background);
+  background: linear-gradient(135deg, #eef2f7 0%, #e2e8f0 50%, #dbeafe 100%);
   color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* Modern Minimal Scrollbar */
@@ -78,4 +84,354 @@ body {
 }
 .accordion-content.open {
   opacity: 1;
+}
+
+/* --- Redirect Template Page Styles --- */
+
+.mobile-card {
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 36px;
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 71, 171, 0.08), 
+    0 10px 25px -5px rgba(0, 0, 0, 0.04), 
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  padding: 28px 24px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logo-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 71, 171, 0.08),
+    0 4px 12px -2px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 71, 171, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  margin: 0 auto 12px;
+}
+.logo-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 
+    0 15px 25px -8px rgba(0, 71, 171, 0.12),
+    0 6px 15px -3px rgba(0, 0, 0, 0.06);
+}
+
+/* Brand heading style */
+.brand-heading {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.brand-heading h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  background: linear-gradient(135deg, #0B2B40 0%, #1A5F7A 50%, #1F8A9C 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.brand-heading .tagline {
+  font-size: 0.9rem;
+  color: #5E6F8D;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Buttons */
+.btn-telegram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: linear-gradient(98deg, #0088cc 0%, #2AABEE 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 14px 0;
+  border-radius: 100px;
+  width: 100%;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 
+    0 10px 25px -5px rgba(0, 136, 204, 0.25),
+    0 4px 10px -2px rgba(0, 136, 204, 0.1);
+  cursor: pointer;
+  margin-bottom: 18px;
+  border: none;
+}
+.btn-telegram i {
+  font-size: 1.35rem;
+  transition: transform 0.3s ease;
+}
+.btn-telegram:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 25px -4px rgba(0, 136, 204, 0.35),
+    0 6px 12px -2px rgba(0, 136, 204, 0.15);
+}
+.btn-telegram:hover i {
+  transform: translateX(2px) scale(1.1);
+}
+.btn-telegram:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 
+    0 5px 10px -3px rgba(0, 136, 204, 0.3);
+}
+
+.btn-telegram-secondary {
+  margin-top: 6px;
+  margin-bottom: 16px;
+  background: linear-gradient(98deg, #0F5B78 0%, #1B7A9E 100%);
+  box-shadow: 
+    0 10px 25px -5px rgba(27, 122, 158, 0.25),
+    0 4px 10px -2px rgba(27, 122, 158, 0.1);
+}
+.btn-telegram-secondary:hover {
+  box-shadow: 
+    0 12px 25px -4px rgba(27, 122, 158, 0.35),
+    0 6px 12px -2px rgba(27, 122, 158, 0.15);
+}
+
+/* Bullet points */
+.benefits-list {
+  list-style: none;
+  margin: 12px 0 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #F8FAFE;
+  border: 1px solid #E9F1FC;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1C2F40;
+  transition: all 0.25s ease;
+}
+.benefits-list li:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: #D2E3F9;
+  box-shadow: 0 8px 15px -6px rgba(0, 71, 171, 0.05);
+}
+.benefits-list li .icon-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #EBF5F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1F8A9C;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+.benefits-list li:hover .icon-wrapper {
+  background: #1F8A9C;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.benefits-list li span {
+  flex: 1;
+  line-height: 1.35;
+}
+
+/* Countdown section */
+.countdown-section {
+  text-align: center;
+  background: #F0F7FA;
+  border: 1px solid #E3EFF4;
+  border-radius: 20px;
+  padding: 12px 16px;
+  margin: 16px 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+.countdown-section.paused {
+  background: #FEF3C7;
+  border-color: #FDE68A;
+}
+.countdown-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1A5F7A;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffffcc;
+  padding: 5px 14px;
+  border-radius: 100px;
+  flex: 1;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.countdown-section.paused .countdown-text {
+  color: #B45309;
+  background: #ffffffcc;
+}
+.countdown-number {
+  background: #1F5E7E;
+  color: white;
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-family: monospace;
+  font-size: 1.1rem;
+  font-weight: bold;
+  min-width: 50px;
+  display: inline-block;
+  box-shadow: 0 4px 10px -3px rgba(31, 94, 126, 0.3);
+}
+.countdown-section.paused .countdown-number {
+  background: #D97706;
+  box-shadow: none;
+}
+.pause-btn {
+  background: #ffffff;
+  border: 1px solid #E2E8F0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #475569;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px -3px rgba(0, 0, 0, 0.05);
+}
+.pause-btn:hover {
+  background: #F1F5F9;
+  color: #1E293B;
+  transform: scale(1.05);
+  border-color: #CBD5E1;
+}
+.pause-btn:active {
+  transform: scale(0.95);
+}
+.pause-btn.disabled {
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+.redirect-message {
+  font-size: 0.75rem;
+  font-weight: 550;
+  color: #5E6F8D;
+  margin-top: 6px;
+  width: 100%;
+  text-align: center;
+}
+.countdown-section.paused .redirect-message {
+  color: #B45309;
+}
+
+/* Trust note */
+.trust-note {
+  text-align: center;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 18px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748B;
+  transition: all 0.2s ease;
+}
+.trust-badge:hover {
+  background: #F1F5F9;
+  color: #475569;
+  transform: translateY(-1px);
+}
+.trust-badge i {
+  color: #0ea5e9;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+  .mobile-card {
+    max-width: 580px;
+    padding: 32px 28px;
+  }
+  .btn-telegram {
+    font-size: 1.15rem;
+    padding: 15px 0;
+  }
+  .benefits-list li {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+  .countdown-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-card {
+    padding: 24px 18px;
+    border-radius: 30px;
+  }
+  .brand-heading h1 {
+    font-size: 1.65rem;
+    letter-spacing: -0.5px;
+  }
+  .benefits-list li {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  .btn-telegram {
+    font-size: 1.05rem;
+    padding: 12px 0;
+  }
 }

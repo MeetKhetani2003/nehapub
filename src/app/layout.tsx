@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Premium Work From Home Handwriting Jobs | Neha Book Publication",
+  title: "Neha Book Publication | Content Writing Jobs",
   description: "Flexible work from home handwriting opportunities with weekly payouts. Join Neha Book Publication today via Telegram.",
   authors: [{ name: "Neha Book Publication" }],
 };
